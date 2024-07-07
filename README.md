@@ -50,8 +50,10 @@ Following model development, I uploaded the trained model to the Hugging Face mo
 To deploy the system as a cloud-based service, I utilized AWS EC2-ECR instances for hosting and Docker image management. Continuous integration and deployment (CI/CD) pipelines were established using GitHub Actions, ensuring seamless updates and scalability of the deployed solution.
 
 
-
-
+## Take a look at the trained model
+```bash
+https://huggingface.co/MANMEET75/videomae-base-finetuned-HumanActivityRecognition
+```
 
 ## Steps to Run it
 ### 1. Cloning the Repository
