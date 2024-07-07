@@ -1,4 +1,41 @@
-# Human-Activity-Recognition-for-Video-Analytics
+## Intelligent Video Analysis for Security Monitoring
+Developing a sophisticated video analysis system to accurately detect and classify human activities from surveillance footage is crucial for enhancing security measures. For demonstration purposes, this project focuses on recognizing two high-risk activities: push-ups and pull-ups, typically performed in precarious locations such as dam sites and train tracks.
+
+Imagine a scenario where a CCTV camera at a dam identifies individuals engaging in risky behavior like pull-ups, posing potential hazards. Similarly, detecting individuals performing push-ups near train tracks highlights unsafe practices.
+
+Due to current limitations in GPU resources, this system currently supports only two activity classes. However, the framework is designed for scalability, allowing for expansion to encompass a broader range of activities in the future.
+
+
+## Problem Statement (Video Analytics for Activity Recognition)
+**Scenario:** Develop a video analytics system to recognize and classify human activities in surveillance footage for security monitoring.
+### Tasks:
+1. **Data Collection:**
+	- Use a dataset of video clips labeled with different human activities (e.g., walking, running, fighting).
+	- Ensure the dataset includes various environments and lighting conditions.
+
+2. **Data Preprocessing:**
+	- Preprocess the video data by extracting frames and resizing them.
+	- Perform data augmentation to increase the diversity of the training set.
+4. **Feature Extraction:**
+	- Extract spatiotemporal features using 3D Convolutional Neural Networks (3D CNNs) or Recurrent Neural Networks (RNNs) with CNN feature extraction.
+	- Create a feature vector for each video clip.
+6. **Model Development:**
+	- Develop an activity recognition model using deep learning techniques (e.g., C3D, LSTM, or Transformer-based models).
+	- Train the model on the labeled dataset and validate its performance.
+8. **Evaluation:**
+	- Evaluate the model using metrics like accuracy, precision, recall, and confusion matrix.
+	- Perform cross-validation to ensure robustness.
+10. **Deployment:**
+	- Deploy the system as a cloud-based service.
+	- Create a dashboard to visualize real-time activity recognition results and alerts for suspicious activities.
+
+**Expected Output:**
+- Trained activity recognition model.
+- Real-time video analytics dashboard for security monitoring.
+
+
+## How I have solved the problem statement?
+
 
 
 
