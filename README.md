@@ -34,7 +34,20 @@ Due to current limitations in GPU resources, this system currently supports only
 - Real-time video analytics dashboard for security monitoring.
 
 
-## How I have solved the problem statement?
+## Solution Approach and Challenges Overcome
+To address the challenge of detecting and classifying human activities in surveillance footage, I initially selected two classes—push-ups and pull-ups—due to constraints on GPU resources. This choice was made to avoid the high costs associated with scaling to multiple classes requiring more powerful GPUs.
+
+## Model Selection and Training
+I employed the VideoMAE transformer-based model for video classification. Despite encountering CUDA memory issues in Google Colab's free tier, I fine-tuned VideoMAE using a t2.2xlarge virtual machine on Amazon SageMaker from AWS. After just two epochs of training, the model achieved an impressive accuracy of over 90% on the evaluation dataset.
+
+## Feature Extraction and Implementation
+For feature extraction in transformer-based models, I utilized the VideoMAEImageProcessor and leveraged the PyTorchVideo library for data preprocessing. Training was facilitated using the Trainer class, ensuring efficient model convergence.
+
+## Deployment and Integration
+Following model development, I uploaded the trained model to the Hugging Face model repository for accessibility. Moving to the development phase, I modularized the code to align with production environment standards, integrated Docker for containerization, and built a RESTful API using FastAPI. To showcase functionality, I created a prototype application with Streamlit.
+
+## Continuous Integration and Deployment
+To deploy the system as a cloud-based service, I utilized AWS EC2-ECR instances for hosting and Docker image management. Continuous integration and deployment (CI/CD) pipelines were established using GitHub Actions, ensuring seamless updates and scalability of the deployed solution.
 
 
 
@@ -60,7 +73,7 @@ conda activate venv/
 ```bash
 pip install -r requirements.txt
 ```
-### 5. Run the following command using your hugging face token to push the model on your side in your command prompt if you want to
+### 5. Use your Hugging Face token to execute the following command in your command prompt to push the model to your side.
 ```bash
 python train.py
 ```
@@ -72,15 +85,6 @@ streamlit run streamlit.py
 ```bash
 uvicorn api:app --reload --port 8080
 ``` 
-## Steps for creating the docker image
-```bash
-docker login
-docker build -t imagename .
-```
-
-
-
-
 
 # AWS-CICD-Deployment-with-Github-Actions
 
