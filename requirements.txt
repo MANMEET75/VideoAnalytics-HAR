@@ -1,0 +1,15 @@
+pytorchvideo 
+transformers
+evaluate
+torch==2.0.1
+torchvision==0.15.2
+xformers==0.0.21
+accelerate==0.27.2
+av
+streamlit
+scikit-learn
+flask
+uvicorn
+fastapi
+dash
+plotly
