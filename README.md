@@ -5,6 +5,7 @@ Imagine a scenario where a CCTV camera at a dam identifies individuals engaging 
 
 Due to current limitations in GPU resources, this system currently supports only two activity classes. However, the framework is designed for scalability, allowing for expansion to encompass a broader range of activities in the future.
 
+## Dashboard using Streamlit
 <img src="static/images/streamlitdemo.gif">
 
 ## Problem Statement (Video Analytics for Activity Recognition)
@@ -55,6 +56,9 @@ To deploy the system as a cloud-based service, I utilized AWS EC2-ECR instances 
 ```bash
 https://huggingface.co/MANMEET75/videomae-base-finetuned-HumanActivityRecognition
 ```
+
+## FastAPI
+<img src="static/images/fastapidemo.gif">
 
 ## Steps to Run it
 ### 1. Cloning the Repository
