@@ -5,6 +5,7 @@ Imagine a scenario where a CCTV camera at a dam identifies individuals engaging 
 
 Due to current limitations in GPU resources, this system currently supports only two activity classes. However, the framework is designed for scalability, allowing for expansion to encompass a broader range of activities in the future.
 
+<img src="static/images/streamlitdemo.gif">
 
 ## Problem Statement (Video Analytics for Activity Recognition)
 **Scenario:** Develop a video analytics system to recognize and classify human activities in surveillance footage for security monitoring.
